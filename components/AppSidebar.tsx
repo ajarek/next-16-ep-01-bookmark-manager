@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Sidebar,
   SidebarContent,
@@ -10,8 +12,9 @@ import {
   SidebarSeparator,
   SidebarHeader,
 } from '@/components/ui/sidebar'
-import { Home, Archive } from 'lucide-react'
+import { Home, Archive, Bookmark } from 'lucide-react'
 import { Input } from './ui/input'
+import FormSearchBookmark from './SearchBookmark'
 const items = [
   {
     title: 'AI',
@@ -33,13 +36,22 @@ const items = [
     title: 'HTML',
     numberOfTabs: 0,
   },
+  {
+    title: 'All',
+    numberOfTabs: 14,
+  },
 ]
+
+
 export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupLabel className='text-xl  font-bold flex items-center gap-2'>
+            <span className='w-6 h-6 rounded-sm bg-primary text-primary-foreground'><Bookmark /></span>
+            Bookmark Manager
+            </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
@@ -66,11 +78,7 @@ export function AppSidebar() {
                   className='flex items-center justify-between mb-2'
                 >
                   <div className='flex items-center gap-2'>
-                    <Input
-                      type='checkbox'
-                      id={item.title}
-                      className=' w-4 h-4 '
-                    />
+                    <FormSearchBookmark query='tag' id={item.title} />
 
                     <span className='text-base'>{item.title}</span>
                   </div>

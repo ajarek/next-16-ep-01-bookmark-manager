@@ -1,5 +1,6 @@
 [
   {
+    "id":1,
     "title": "Frontend Mentor",
     "url": "https://frontendmentor.io",
     "description": "Improve your front-end coding skills by building real projects. Solve real-world HTML, CSS and JavaScript challenges whilst working to professional designs.",
@@ -13,6 +14,7 @@
     "updated": "15 Jan"
   },
   {
+    "id":2,
     "title": "MDN Web Docs",
     "url": "https://developer.mozilla.org",
     "description": "The MDN Web Docs site provides information about Open Web technologies including HTML, CSS, and APIs for both Web sites and progressive web apps.",
@@ -27,6 +29,7 @@
     "updated": "10 Jan"
   },
   {
+    "id":3,
     "title": "React Docs",
     "url": "https://react.dev",
     "description": "The library for web and native user interfaces. Build user interfaces out of individual pieces called components.",
@@ -40,6 +43,7 @@
     "updated": "20 Feb"
   },
   {
+    "id":4,
     "title": "Claude",
     "url": "https://claude.ai",
     "description": "An AI assistant created by Anthropic that can help with analysis, writing, coding, math, and creative tasks through natural conversation.",
@@ -53,6 +57,7 @@
     "updated": "18 Feb"
   },
   {
+    "id":5,
     "title": "Web.dev",
     "url": "https://web.dev",
     "description": "Guidance to build modern web experiences that work on any browser. Learn about web vitals, PWAs, and more.",
@@ -66,6 +71,7 @@
     "updated": "15 Feb"
   },
   {
+    "id":6,
     "title": "Tailwind CSS",
     "url": "https://tailwindcss.com",
     "description": "A utility-first CSS framework for rapidly building modern websites without ever leaving your HTML.",
@@ -79,6 +85,7 @@
     "updated": "12 Feb"
   },
   {
+    "id":7,
     "title": "Next.js Docs",
     "url": "https://nextjs.org/docs",
     "description": "The official documentation for Next.js, a React framework for building fast and scalable web applications.",
@@ -92,6 +99,7 @@
     "updated": "10 Mar"
   },
   {
+    "id":8,
     "title": "Node.js Docs",
     "url": "https://nodejs.org/en/docs",
     "description": "Official documentation for Node.js, providing details about its API, modules, and runtime environment for server-side JavaScript.",
@@ -105,6 +113,7 @@
     "updated": "02 Apr"
   },
   {
+    "id":9,
     "title": "W3Schools",
     "url": "https://www.w3schools.com",
     "description": "A web developer's site, with tutorials and references on web development languages such as HTML, CSS, JavaScript, and more.",
@@ -118,6 +127,7 @@
     "updated": "22 Feb"
   },
   {
+    "id":10,
     "title": "FreeCodeCamp",
     "url": "https://www.freecodecamp.org",
     "description": "Learn to code for free and get developer certifications through interactive lessons and projects.",
@@ -131,6 +141,7 @@
     "updated": "25 Mar"
   },
   {
+    "id":11,
     "title": "Stack Overflow",
     "url": "https://stackoverflow.com",
     "description": "A public platform for developers to ask and answer coding questions, and share programming knowledge.",
@@ -144,6 +155,7 @@
     "updated": "17 Apr"
   },
   {
+    "id":12,
     "title": "CSS-Tricks",
     "url": "https://css-tricks.com",
     "description": "Tips, tricks, and techniques on using CSS in modern web design.",
@@ -157,6 +169,7 @@
     "updated": "30 Jan"
   },
   {
+    "id":13,
     "title": "CodePen",
     "url": "https://codepen.io",
     "description": "An online code editor for HTML, CSS, and JavaScript, allowing developers to share and experiment with front-end code.",
@@ -170,6 +183,7 @@
     "updated": "11 Mar"
   },
   {
+    "id":14,
     "title": "GitHub",
     "url": "https://github.com",
     "description": "A platform for version control and collaboration, allowing developers to host and review code, manage projects, and build software together.",
