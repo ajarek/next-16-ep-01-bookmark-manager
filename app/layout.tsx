@@ -34,7 +34,7 @@ export default function RootLayout({
       
       <SidebarProvider>
       <AppSidebar />
-       <main className="max-w-7xl w-full mx-auto">
+       <main className=" w-full mx-auto">
          <Navbar/>
          <SidebarTrigger />
         {children}
