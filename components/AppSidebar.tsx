@@ -17,8 +17,16 @@ import { Input } from './ui/input'
 import FormSearchBookmark from './SearchBookmark'
 const items = [
   {
+    title: 'All',
+    numberOfTabs: 14,
+  },
+  {
     title: 'AI',
-    numberOfTabs: 2,
+    numberOfTabs: 1,
+  },
+  {
+    title: 'API',
+    numberOfTabs: 1,
   },
   {
     title: 'Community',
@@ -26,20 +34,55 @@ const items = [
   },
   {
     title: 'CSS',
-    numberOfTabs: 4,
+    numberOfTabs: 3,
   },
   {
     title: 'Design',
     numberOfTabs: 1,
   },
+   {
+    title: 'Framework',
+    numberOfTabs: 3,
+  },
+  {
+    title: 'Frontend',
+    numberOfTabs: 1,
+  },
   {
     title: 'HTML',
-    numberOfTabs: 0,
+    numberOfTabs: 1,
   },
   {
-    title: 'All',
-    numberOfTabs: 14,
+    title: 'JavaScript',
+    numberOfTabs: 3,
   },
+  {
+    title: 'Learning',
+    numberOfTabs: 7,
+  },
+  {
+    title: 'Q&A',
+    numberOfTabs: 1,
+  },
+  {
+    title: 'Practice',
+    numberOfTabs: 4,
+  },
+  {
+    title: 'Reference',
+    numberOfTabs: 5,
+  },
+  
+  {
+    title: 'Backend',
+    numberOfTabs: 1,
+  },
+ 
+  {
+    title: 'Tools',
+    numberOfTabs: 4,
+  },
+  
 ]
 
 
@@ -48,7 +91,7 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel className='text-xl  font-bold flex items-center gap-2'>
+          <SidebarGroupLabel className='text-lg  font-bold flex items-center gap-2'>
             <span className='w-6 h-6 rounded-sm bg-primary text-primary-foreground'><Bookmark /></span>
             Bookmark Manager
             </SidebarGroupLabel>

@@ -11,7 +11,8 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 
-export default function Home() {
+export default async function Home({searchParams,}: {  searchParams: Promise<{ tag: string }>}) {
+   const { tag } = (await searchParams) as { tag: string }
   return (
     <div className='min-h-[calc(100vh-96px)] flex flex-col items-center justify-start gap-4 p-4'>
       <div className='w-full flex items-center justify-between'>
@@ -22,7 +23,10 @@ export default function Home() {
         </Button>
       </div>
       <div className='w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-4 place-items-center'>
-      {dataBookmarks.map((dt)=>
+
+      {dataBookmarks
+      .filter((dt)=>(!tag || tag === 'All' ? true : dt.tags.includes(tag)))
+      .map((dt)=>
       <Card key={dt.id} className=' w-full h-72 max-w-sm border-4'>
         <CardHeader>
           <CardTitle>{dt.title}</CardTitle>

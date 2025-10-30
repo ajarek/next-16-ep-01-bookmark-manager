@@ -62,9 +62,9 @@
     "url": "https://web.dev",
     "description": "Guidance to build modern web experiences that work on any browser. Learn about web vitals, PWAs, and more.",
     "tags": [
-      "Performance",
+      "Community",
       "Learning",
-      "Tips"
+      "Reference"
     ],
     "views": 15,
     "created": "16 Aug",
@@ -119,7 +119,7 @@
     "description": "A web developer's site, with tutorials and references on web development languages such as HTML, CSS, JavaScript, and more.",
     "tags": [
       "Learning",
-      "Tutorials",
+      "Practice",
       "Reference"
     ],
     "views": 245,
@@ -148,7 +148,7 @@
     "tags": [
       "Community",
       "Q&A",
-      "Coding"
+      "Learning"
     ],
     "views": 512,
     "created": "11 Mar",
@@ -162,7 +162,7 @@
     "tags": [
       "CSS",
       "Design",
-      "Web"
+      "Learning"
     ],
     "views": 188,
     "created": "09 May",
@@ -189,8 +189,8 @@
     "description": "A platform for version control and collaboration, allowing developers to host and review code, manage projects, and build software together.",
     "tags": [
       "Tools",
-      "Collaboration",
-      "Open Source"
+      "Reference",
+      "Community"
     ],
     "views": 870,
     "created": "15 May",
