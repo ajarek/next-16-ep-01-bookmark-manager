@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button'
-import { ArrowDownUp, Eye, Clock, Calendar, Pin, EllipsisVertical } from 'lucide-react'
+import {  Eye, Clock, Calendar, Pin, EllipsisVertical } from 'lucide-react'
 import dataBookmarks from '@/data/data.json'
 import {
   Card,
@@ -12,8 +12,8 @@ import {
 } from '@/components/ui/card'
 import ButtonSortTitle from '@/components/ButtonSortTitle'
 
-export default async function Home({searchParams,}: {  searchParams: Promise<{ tag: string, sortTitle: string }>}) {
-   const { tag, sortTitle } = (await searchParams) as { tag: string, sortTitle: string }
+export default async function Home({searchParams,}: {  searchParams: Promise<{ tag: string, sortTitle: string, title: string }>}) {
+   const { tag, sortTitle, title  } = (await searchParams) as { tag: string, sortTitle: string, title: string }
   return (
     <div className='min-h-[calc(100vh-96px)] flex flex-col items-center justify-start gap-4 p-4'>
       <div className='w-full flex items-center justify-between'>
@@ -32,8 +32,12 @@ export default async function Home({searchParams,}: {  searchParams: Promise<{ t
           items = items.slice().sort((a, b) => a.title.localeCompare(b.title))
         }
 
-        return items.map((dt) => (
-          <Card key={dt.id} className=' w-full h-72 max-w-sm border-4'>
+        return items
+        .filter((item) =>
+            title ? item.title.toLowerCase().includes(title.toLowerCase()) : true
+          )
+        .map((dt) => (
+          <Card key={dt.id} className=' w-full min-h-82 max-w-sm border-4'>
             <CardHeader>
               <CardTitle>{dt.title}</CardTitle>
               
@@ -43,11 +47,11 @@ export default async function Home({searchParams,}: {  searchParams: Promise<{ t
             </CardHeader>
             <CardContent>
               <CardDescription>{dt.description}</CardDescription>
-              <div className=' flex  items-center gap-2 mt-2'>
+              <div className='w-full flex flex-wrap  items-center gap-2 mt-2 '>
 
 
               {dt.tags.map((tag, index) => (
-                <div key={index} className='w-full flex items-center gap-2 '>
+                <div key={index} className=' flex  items-center gap-2 '>
                   <div className='bg-primary/80 text-primary-foreground px-2 rounded-md'>{tag}</div>
                 </div>
               ))}

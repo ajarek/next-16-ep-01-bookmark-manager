@@ -15,6 +15,7 @@ import {
 import { Home, Archive, Bookmark } from 'lucide-react'
 import { Input } from './ui/input'
 import FormSearchBookmark from './SearchBookmark'
+import Link from 'next/link'
 const items = [
   {
     title: 'All',
@@ -99,20 +100,13 @@ export function AppSidebar() {
             <SidebarMenu>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <a href='#'>
+                  <Link href='/'>
                     <Home />
                     <span className='text-base'>Home</span>
-                  </a>
+                  </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild>
-                  <a href='#'>
-                    <Archive />
-                    <span className='text-base'>Archived</span>
-                  </a>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
+              
               <SidebarSeparator />
               <SidebarHeader>Tags</SidebarHeader>
               {items.map((item) => (
