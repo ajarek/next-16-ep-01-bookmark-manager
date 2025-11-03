@@ -21,10 +21,10 @@ import { postBookmark } from '@/lib/action'
 
 const formSchema = z.object({
   title: z.string().min(1).min(3).max(50),
-  url: z.string().min(1).min(3).max(20),
+  url: z.string().min(1).min(3).max(50),
   description: z.string().min(10).max(200),
-  tags: z.array(z.string()).min(1, {
-    error: 'Please select at least one item',
+  tags: z.array(z.string().trim()).min(1, {
+    error: 'Please select at least one item ',
   }),
   views: z.string(),
 })

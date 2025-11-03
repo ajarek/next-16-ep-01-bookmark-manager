@@ -59,7 +59,7 @@ const items = [
   },
   {
     title: 'Learning',
-    numberOfTabs: 7,
+    numberOfTabs: 6,
   },
   {
     title: 'Q&A',
