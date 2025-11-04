@@ -56,13 +56,13 @@ export const postBookmark = async (formData: BookmarkType) => {
 }
 
 export const deleteBookmark = async (formData: FormData) => {
-  const id = formData.get('_id')
+  const id = formData.get('id')
 
   try {
     await connectToDb()
     await Bookmark.findOneAndDelete({ _id: id })
 
-    revalidatePath('/dashboard')
+    revalidatePath('/')
     console.log({ message: `Deleted bookmark ${id}` })
     return { message: `Deleted bookmark ${id}` }
   } catch (err) {

@@ -12,10 +12,12 @@ import {
   SidebarSeparator,
   SidebarHeader,
 } from '@/components/ui/sidebar'
-import { Home, Archive, Bookmark } from 'lucide-react'
-import { Input } from './ui/input'
+import { Home, Bookmark } from 'lucide-react'
 import FormSearchBookmark from './SearchBookmark'
 import Link from 'next/link'
+import { Suspense } from "react";
+
+
 const items = [
   {
     title: 'All',
@@ -115,7 +117,10 @@ export function AppSidebar() {
                   className='flex items-center justify-between mb-2'
                 >
                   <div className='flex items-center gap-2'>
-                    <FormSearchBookmark query='tag' id={item.title} />
+                    <Suspense fallback={ <div>Loading...</div>}>
+                      <FormSearchBookmark query='tag' id={item.title} />
+                    </Suspense>
+                   
 
                     <span className='text-base'>{item.title}</span>
                   </div>

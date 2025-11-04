@@ -11,6 +11,8 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import ButtonSortTitle from '@/components/ButtonSortTitle'
+import ButtonDeleteBookmark from '@/components/ButtonDeleteBookmark'
+import Link from 'next/link'
 
 export default async function Home({
   searchParams,
@@ -62,12 +64,7 @@ export default async function Home({
                   <CardTitle>{dt.title}</CardTitle>
 
                   <CardAction>
-                    <Button
-                      variant={'outline'}
-                      size='icon'
-                    >
-                      <EllipsisVertical />
-                    </Button>
+                    <ButtonDeleteBookmark id={dt.id} />
                   </CardAction>
                 </CardHeader>
                 <CardContent>
@@ -101,7 +98,12 @@ export default async function Home({
                     </span>
                   </div>
                   <div className='w-full flex items-center justify-end'>
-                    <Pin />
+                    <Link
+                      href={dt.url}
+                      target='_blank'
+                    >
+                      <Pin />
+                    </Link>
                   </div>
                 </CardFooter>
               </Card>
